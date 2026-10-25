@@ -1,0 +1,39 @@
+/* Full-stack contact layer and integrations UI. Keep public credentials in the server environment only. */
+.portfolio-host { min-height: 100vh; }
+.project[hidden] { display: none !important; }
+.lead-form { width: 100%; max-width: 660px; margin-top: 18px; padding: clamp(20px, 3vw, 30px); border: 1px solid color-mix(in srgb, var(--paper) 22%, transparent); border-radius: 18px; background: color-mix(in srgb, var(--paper) 5%, transparent); }
+.lead-form-heading .section-number { color: var(--lime); margin-bottom: 12px; }
+.lead-form-heading h3 { margin: 0; font-size: clamp(24px, 3vw, 36px); line-height: .98; letter-spacing: -.065em; }
+.lead-form-heading p { margin: 12px 0 22px; color: color-mix(in srgb, var(--paper) 66%, transparent); font-size: 12px; line-height: 1.7; }
+.lead-form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px 12px; }
+.lead-form-grid label { display: flex; flex-direction: column; gap: 7px; color: color-mix(in srgb, var(--paper) 76%, transparent); font-size: 10px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.lead-form-grid input, .lead-form-grid select, .lead-form-grid textarea { width: 100%; min-width: 0; border: 1px solid color-mix(in srgb, var(--paper) 24%, transparent); border-radius: 8px; padding: 12px 13px; color: var(--paper); background: color-mix(in srgb, var(--paper) 6%, transparent); outline: none; font-size: 13px; font-weight: 400; letter-spacing: 0; text-transform: none; transition: border-color .2s ease, background .2s ease; }
+.lead-form-grid input::placeholder, .lead-form-grid textarea::placeholder { color: color-mix(in srgb, var(--paper) 42%, transparent); }
+.lead-form-grid select { color-scheme: dark; }
+.lead-form-grid select option { color: #171714; background: #f2efe8; }
+.lead-form-grid input:focus, .lead-form-grid select:focus, .lead-form-grid textarea:focus { border-color: var(--lime); background: color-mix(in srgb, var(--paper) 10%, transparent); }
+.lead-form-grid textarea { min-height: 110px; resize: vertical; }
+.lead-form-wide { grid-column: 1 / -1; }
+.lead-form-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: 18px; }
+.lead-form-actions .button { border: 0; }
+.lead-form-actions button:disabled { opacity: .6; cursor: wait; transform: none; }
+.lead-form-privacy { max-width: 220px; color: color-mix(in srgb, var(--paper) 49%, transparent); font-size: 10px; line-height: 1.55; }
+.lead-form-status { min-height: 0; margin: 12px 0 0; font-size: 12px; line-height: 1.65; color: #ffcf89; }
+.lead-form-status:empty { display: none; }
+.lead-form-status.is-success { color: var(--lime); }
+.lead-form-status.is-error { color: #ff9c83; }
+.contact-links .social-link { text-decoration-color: var(--lime); }
+.contact-links .whatsapp-link { color: var(--lime); }
+.connection-indicator { position: fixed; z-index: 20; right: 18px; bottom: 14px; display: flex; align-items: center; gap: 7px; padding: 8px 11px; border: 1px solid var(--line); border-radius: 999px; background: color-mix(in srgb, var(--paper) 88%, transparent); color: var(--soft-ink); backdrop-filter: blur(10px); font-size: 9px; font-weight: 800; letter-spacing: .06em; box-shadow: 0 6px 22px rgba(0,0,0,.06); pointer-events: none; }
+.connection-led { width: 6px; height: 6px; border-radius: 50%; background: #cc755c; }
+.connection-led.online { background: #42a56a; box-shadow: 0 0 0 3px rgba(66,165,106,.12); }
+.connection-led.needs-setup { background: #cba34f; box-shadow: 0 0 0 3px rgba(203,163,79,.12); }
+@media (max-width: 650px) {
+  .lead-form { padding: 18px; }
+  .lead-form-grid { grid-template-columns: minmax(0, 1fr); }
+  .lead-form-wide { grid-column: auto; }
+  .connection-indicator { right: 9px; bottom: 8px; font-size: 8px; padding: 7px 9px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lead-form-grid input, .lead-form-grid select, .lead-form-grid textarea { transition: none; }
+}

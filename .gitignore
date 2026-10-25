@@ -1,10 +1,6 @@
 node_modules/
-client/dist/
-server/coverage/
+dist/
 .env
 .env.*
 !.env.example
 .DS_Store
-.vscode/*
-!.vscode/extensions.json
-npm-debug.log*

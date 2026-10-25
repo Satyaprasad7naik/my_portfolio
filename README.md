@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Satyaprasad Naik — Full-Stack Portfolio
 
 A VS Code-ready full-stack starter for the reimagined portfolio. It includes a responsive portfolio interface, interactive project details and filters, a React/Vite frontend, an Express API, a lead/enquiry form, Gmail delivery through server-side SMTP, configurable WhatsApp/social links, an optional WhatsApp Cloud API notification adapter, tests, and a small GitHub Actions workflow.
@@ -169,3 +170,6 @@ client/.env.example              Optional frontend configuration notes
 .vscode/extensions.json          Suggested editor extensions
 .vscode/tasks.json               VS Code run/build/test tasks
 ```
+=======
+# my_portfolio
+>>>>>>> 91bcfc64359df8f9a8b393b419857a12ac5e9118
